@@ -1,0 +1,25 @@
+body {
+    background-color: darkgrey;
+}
+
+#main {
+    background-color: lightgrey;
+    position: relative;
+    left: 0;
+    text-align: center;
+}
+
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: aqua;
+    color: black;
+    text-align: center;
+    line-height: 3vh;
+    font-weight: 150;
+    font-size: 2vh;
+    letter-spacing: 1;
+}
