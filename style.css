@@ -1,5 +1,6 @@
 body {
     background-color: darkgrey;
+    color: black
 }
 
 #main {
@@ -7,6 +8,10 @@ body {
     position: relative;
     left: 0;
     text-align: center;
+}
+
+#anime-info-container {
+    display:flex;
 }
 
 
