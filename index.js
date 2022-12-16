@@ -44,6 +44,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 li.append(h2, img)
                 animeList.append(li)
 
+                const author = item.authors[0].name;
+                const synopsis = item.synopsis;
+                const score = item.score;
+                infoList.append("Author: ", author," ","Synopsis: ", synopsis, "Score: ", score)
+
                 // const infoList = document.getElementById("fetched-results")
                 // const author = item.authors[0].name;
                 // const synopsis = item.synopsis;
