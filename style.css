@@ -1,10 +1,14 @@
 body {
-    background-color: darkgrey;
-    color: black
+    background-color: rgb(56, 55, 55);
+    color: black;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
 }
 
 #main {
-    background-color: lightgrey;
+    background-color: rgb(126, 126, 126);
     position: relative;
     left: 0;
     text-align: center;
@@ -13,8 +17,30 @@ body {
     align-items: center;
 }
 
+#animeHolder {
+    outline: #103021 solid 1px;
+    max-width: 95%;
+    display: flex;  
+    flex-wrap: wrap;
+}
+
+.container{
+    outline: #480319 solid 4px;
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
+    min-width: 90%;
+    align-self: center;
+}
+.animeCover{
+    max-width: 200px;
+}
+
+
 #anime-info-container {
     display:flex;
+    outline: #348139 solid 4px;
+    max-width: 90%;
 }
 
 ul {
@@ -22,7 +48,7 @@ ul {
 }
 
 .footer{
-    position: fixed;
+    /* position: fixed; */
     left: 0;
     bottom: 0;
     width: 100%;
