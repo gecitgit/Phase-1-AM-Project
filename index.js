@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     formSearch.addEventListener("submit", (event) => {
         event.preventDefault()
         console.log("this is event: ", event.target[0].value)
-        fetch(`https://api.jikan.moe/v4/manga?letter=${event.target[0].value}&order_by=popularity`)
+        fetch(`https://api.jikan.moe/v4/manga?order_by=popularity&sfw&q=${event.target[0].value}`)
         .then(response => response.json())
         .then(response => {                      
             const animeDataList = response.data.map(item =>{
