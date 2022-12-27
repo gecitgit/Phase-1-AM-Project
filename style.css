@@ -26,16 +26,30 @@ body {
 
 .container{
     outline: #480319 solid 4px;
-    max-width: 90%;
+    min-width: 100%;
     display: flex;
     justify-content: center;
-    min-width: 90%;
-    align-self: center;
+    
+    align-items: center;
 }
 .animeCover{
-    max-width: 200px;
+    max-width: 25%;
+    align-self: center;
+    display: flex;
+    padding-top: 1%;
 }
 
+.animeSpacer {
+    display: flex;
+    max-width: 2%;
+    min-width: 2%;
+}
+
+.animeDetails{
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+}
 
 #anime-info-container {
     display:flex;
