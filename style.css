@@ -32,11 +32,30 @@ body {
     
     align-items: center;
 }
+.animeMediaHolder{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
 .animeCover{
-    max-width: 25%;
     align-self: center;
     display: flex;
-    padding-top: 1%;
+    border: 4px solid black;
+    border-radius: 12px;
+    margin: 10px;
+}
+
+.animeLink{
+    background-color: orange;
+    padding: 8px;
+    display: flex;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+.animeLink:hover{
+    opacity: 50%;
+    outline: 2px solid lightgreen;
 }
 
 .animeSpacer {

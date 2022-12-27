@@ -18,7 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 author: item.authors[0].name,
                 blurb: item.synopsis,
                 score: item.score,
-                status: item.status
+                status: item.status,
+                link: item.url
                 
             }
             }
@@ -33,10 +34,22 @@ document.addEventListener("DOMContentLoaded", () => {
                 
                 //creates a picture div inside of the container div and adds the picture
                 const animePictureDiv = document.createElement("div");
+                animePictureDiv.classList.add("animeMediaHolder")
                 animeContainer.appendChild(animePictureDiv)
                 const img = document.createElement("img")
+                img.classList.add("animeCover")
                 animePictureDiv.appendChild(img)
                 img.src = item.picture
+
+                //this creates a button under the anime cover and links to the MAL page
+                const malLink = document.createElement("button");
+                animePictureDiv.appendChild(malLink)
+                malLink.innerText = "Visit the MyAnimeList page!"
+                malLink.classList.add("animeLink")
+                malLink.addEventListener("click", (e) =>{
+                    console.log("read more button was clicked")
+                    window.open(item.link, '_blank')
+                })
 
                 //creates a blank div to make flexbox play fair and create a vertical gap between the manga pic and details
                 const animeSpacer = document.createElement("div");
@@ -59,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 //this adds a new P tag containing the manga's summary
                 const summary = document.createElement("p")
                 animeDetails.appendChild(summary)
-                summary.innerText = "Summary: "+item.blurb
+                summary.innerText = "<strong>Summary: </strong>"+item.blurb
                 
                 //this adds a new P tag containing the author's information
                 const author = document.createElement("p")
