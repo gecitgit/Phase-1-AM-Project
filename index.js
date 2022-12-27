@@ -7,10 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("this is event: ", event.target[0].value)
         fetch(`https://api.jikan.moe/v4/manga?letter=${event.target[0].value}&order_by=popularity`)
         .then(response => response.json())
-        .then(response => {
-            // const animeList = document.querySelector("#anime-list")
-            // const infoList = document.getElementById("fetched-results")
-                        
+        .then(response => {                      
             const animeDataList = response.data.map(item =>{
                 return {
                 title: item.title,
