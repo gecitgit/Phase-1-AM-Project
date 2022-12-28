@@ -17,11 +17,19 @@ body {
     align-items: center;
 }
 
+#appTitle{
+    letter-spacing: -4px;
+    font-size: 125;
+    font-family: 'Kenia', cursive;
+    margin-bottom: 0;
+}
+
 #animeHolder {
     outline: #103021 solid 1px;
     max-width: 95%;
     display: flex;  
     flex-wrap: wrap;
+    padding: 20px;
 }
 
 .container{
@@ -64,6 +72,9 @@ body {
     min-width: 2%;
 }
 
+
+
+
 .animeDetails{
     max-width: 70%;
     display: flex;
@@ -81,7 +92,7 @@ ul {
 }
 
 .footer{
-    /* position: fixed; */
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -92,4 +103,5 @@ ul {
     font-weight: 150;
     font-size: 2vh;
     letter-spacing: 1;
+    padding: .5vh;
 }

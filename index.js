@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     score: item?.score || "No score was found.",
                     status: item?.status || "Status unclear.",
                     link: item.url
+                    //optional chaining + logical OR to allow for incomplete API data   
                 }
                 }
             )
@@ -43,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 malLink.innerText = "Visit the MyAnimeList page!"
                 malLink.classList.add("animeLink")
                 malLink.addEventListener("click", (e) =>{
-                    console.log("read more button was clicked")
+                    // console.log("read more button was clicked")
                     window.open(item.link, '_blank')
                     }
                 )
