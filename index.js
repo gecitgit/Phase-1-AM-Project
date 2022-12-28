@@ -10,16 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(response => {                      
             const animeDataList = response.data.map(item =>{
                 return {
-                title: item.title,
-                picture: item.images.jpg.image_url,
-                author: item.authors[0].name,
-                blurb: item.synopsis,
-                score: item.score,
-                status: item.status,
-                link: item.url
-                
-            }
-            }
+                    title: item.title,
+                    picture: item.images.jpg.image_url,
+                    author: item.authors[0]?.name || "The author was not listed.",
+                    blurb: item?.synopsis || "No synopsis provided.",
+                    score: item?.score || "No score was found.",
+                    status: item?.status || "Status unclear.",
+                    link: item.url
+                }
+                }
             )
             console.log("this is the animedatalist: ", animeDataList)
             
@@ -46,7 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 malLink.addEventListener("click", (e) =>{
                     console.log("read more button was clicked")
                     window.open(item.link, '_blank')
-                })
+                    }
+                )
 
                 //creates a blank div to make flexbox play fair and create a vertical gap between the manga pic and details
                 const animeSpacer = document.createElement("div");
@@ -85,7 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 const status = document.createElement("p")
                 animeDetails.appendChild(status)
                 status.innerText = "Current Status: " + item.status
-                
 
                 return animeContainer
             }
@@ -95,7 +94,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const animeHolder = document.getElementById("animeHolder")
             animeDivList.forEach(element =>{
                 animeHolder.appendChild(element)
-            })
+                }
+            )
 
             
             
@@ -106,7 +106,8 @@ document.addEventListener("DOMContentLoaded", () => {
         // .catch(error => console.log("ERROR"))
 
             
-        })
+        }
+        )
     
     formSearch.reset()
 
@@ -119,12 +120,14 @@ document.addEventListener("DOMContentLoaded", () => {
     resetButton.addEventListener("click", (e) => {
         console.log("the reset button is being clicked!")
         resetChecker()
-    })
+        }
+    )
 
 
 
 
-})
+    }
+)
 
 
 
