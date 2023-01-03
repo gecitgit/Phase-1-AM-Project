@@ -106,11 +106,11 @@ document.addEventListener("DOMContentLoaded", () => {
             )
         // .catch(error => console.log("ERROR"))
 
-            
+        formSearch.reset()
+
         }
         )
     
-    formSearch.reset()
 
     
     //include an event listener for mouseover on pics
@@ -124,11 +124,22 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     )
 
-
-
+    let redoButton = document.getElementById("reset-button")
+    redoButton.addEventListener("pointerenter", event => {
+        console.log("the reset button has been entered")
+        event.target.style.backgroundColor = "red";
+        event.target.style.fontWeight = "bold";
+    })
+    redoButton.addEventListener("pointerleave", event => {
+        console.log("the reset button has been left")
+        event.target.style.backgroundColor = "aqua";
+        event.target.style.fontWeight = "normal"
+    })
 
     }
 )
+
+
 
 
 
