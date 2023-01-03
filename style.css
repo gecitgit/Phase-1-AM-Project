@@ -34,13 +34,6 @@ body {
     margin: 0;
 }
 
-/* #appTitle{
-    letter-spacing: -4px;
-    font-size: 100;
-    font-family: cursive;
-    margin-bottom: 0;
-} */
-
 #search-bar{
     display: flex;
     margin: 0;
@@ -62,6 +55,12 @@ body {
 #reset-button{
     background-color: aqua;
     display: flex;
+    width: 200px;
+    line-height: 2vh;
+    border-radius: 12px;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 20px;
 }
 
 

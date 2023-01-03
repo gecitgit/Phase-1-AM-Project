@@ -70,22 +70,22 @@ document.addEventListener("DOMContentLoaded", () => {
                 //this adds a new P tag containing the manga's summary
                 const summary = document.createElement("p")
                 animeDetails.appendChild(summary)
-                summary.innerText = "<strong>Summary: </strong>"+item.blurb
+                summary.innerHTML = "<strong>Summary: </strong>"+item.blurb
                 
                 //this adds a new P tag containing the author's information
                 const author = document.createElement("p")
                 animeDetails.appendChild(author)
-                author.innerText = "Author: "+item.author
+                author.innerHTML = "<strong>Author: </strong>"+item.author
 
                 //this adds a new P tag containing the manga's rating
                 const score = document.createElement("p")
                 animeDetails.appendChild(score)
-                score.innerText = "Average Rating: " + item.score
+                score.innerHTML = "<strong>Average Rating: </strong>" + item.score
 
                 //this adds a new P tag containing the manga's publishing status
                 const status = document.createElement("p")
                 animeDetails.appendChild(status)
-                status.innerText = "Current Status: " + item.status
+                status.innerHTML = "<strong>Current Status: </strong>" + item.status
 
                 return animeContainer
             }
