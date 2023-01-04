@@ -37,19 +37,20 @@ body {
 #search-bar{
     display: flex;
     margin: 0;
-
+    outline: aquamarine 5px double;
+    border-radius: 12px;
 }
 #search{
     width: 250px;
     line-height: 2vh;
-    border-radius: 12px;
+    border-radius: 12px 0px 0px 12px;
     padding-left: 5px;
 }
 
 #submitSearch{
     width: 75px;
     line-height: 2vh;
-    border-radius: 12px;
+    border-radius: 0px 12px 12px 0px;
 }
 
 #reset-button{
@@ -59,17 +60,19 @@ body {
     line-height: 2vh;
     border-radius: 12px;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-size: 20px;
+    outline: aquamarine 3px solid;
+
 }
 
 
 #animeHolder {
-    outline: #103021 solid 1px;
     max-width: 95%;
     display: flex;  
     flex-wrap: wrap;
     padding: 20px;
+    margin-bottom: 10px;
 }
 
 .container{
@@ -77,7 +80,7 @@ body {
     min-width: 100%;
     display: flex;
     justify-content: center;
-    
+    margin-bottom: 20px;
     align-items: center;
 }
 .container:hover{
@@ -116,8 +119,12 @@ body {
     min-width: 2%;
 }
 
-
-
+p{
+    margin: 5px;
+}
+h3{
+    margin-top: -10px;
+}
 
 .animeDetails{
     max-width: 70%;
@@ -125,11 +132,7 @@ body {
     flex-direction: column;
 }
 
-#anime-info-container {
-    display:flex;
-    outline: #348139 solid 4px;
-    max-width: 90%;
-}
+
 
 ul {
     list-style: none;
@@ -143,9 +146,9 @@ ul {
     background-color: aqua;
     color: black;
     text-align: center;
-    line-height: 3vh;
+    line-height: 1.5vh;
     font-weight: 150;
-    font-size: 2vh;
+    font-size: 1vh;
     letter-spacing: 1;
     padding: .5vh;
 }

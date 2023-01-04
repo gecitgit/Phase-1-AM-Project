@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 malLink.innerText = "Visit the MyAnimeList page!"
                 malLink.classList.add("animeLink")
                 malLink.addEventListener("click", (e) =>{
-                    // console.log("read more button was clicked")
                     window.open(item.link, '_blank')
                     }
                 )
@@ -110,10 +109,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
         )
-    
-
-    
-    //include an event listener for mouseover on pics
     
     
     //this will reset the page
