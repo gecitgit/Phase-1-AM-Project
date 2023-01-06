@@ -4,8 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const formSearch = document.getElementById("search-bar")
     formSearch.addEventListener("submit", (event) => {
         event.preventDefault()
+        resetAnimeList()
         console.log("this is event: ", event.target[0].value)
-        fetch(`https://api.jikan.moe/v4/manga?order_by=popularity&sfw&q=${event.target[0].value}`)
+        fetch(`https://api.jikan.moe/v4/manga?order_by=popularity&sfw=true&q=${event.target[0].value}`)
         .then(response => response.json())
         .then(response => {                      
             const animeDataList = response.data.map(item =>{
@@ -134,7 +135,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 )
 
-
+function resetAnimeList(){
+    animeHolder.innerHTML = ""
+}
 
 
 
