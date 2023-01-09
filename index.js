@@ -128,12 +128,12 @@ document.addEventListener("DOMContentLoaded", () => {
     let redoButton = document.getElementById("reset-button")
     redoButton.addEventListener("pointerenter", event => {
         console.log("the reset button has been entered")
-        event.target.style.backgroundColor = "red";
+        event.target.style.backgroundColor = "#cc59d4";
         event.target.style.fontWeight = "bold";
     })
     redoButton.addEventListener("pointerleave", event => {
         console.log("the reset button has been left")
-        event.target.style.backgroundColor = "aqua";
+        event.target.style.backgroundColor = "#33A62B";
         event.target.style.fontWeight = "normal"
     })
 

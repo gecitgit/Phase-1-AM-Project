@@ -149,13 +149,14 @@ h4{
     line-height: 20px;
     border-radius: 0px 12px 12px 0px;
     cursor: pointer;
+    background-color: #33A62B;
 }
 #submitSearch:hover{
-    background-color: greenyellow;
+    background-color: #cc59d4;
 }
 
 #reset-button{
-    background-color: aqua;
+    background-color: #33A62B;
     display: flex;
     width: 200px;
     line-height: 20px;
@@ -278,10 +279,9 @@ h4{
 }
 
 .links{
-    position: inherit;
+    position: absolute;
     display: flex;
     flex-direction: row;
-    position: fixed;
     top: 12px;
     right: 12px;
     margin: 5px;
