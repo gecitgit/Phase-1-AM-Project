@@ -1,15 +1,52 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: rgb(204, 116, 116);
+    background-image: var(--gradient);
+    background-size: 500%;
+    animation: bg-animation 18s infinite alternate;
     color: black;
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+}
 
+@keyframes bg-animation {
+    0% {background-position: 0% 100%;}
+    100% {background-position: 100% 0%;}
+}
+
+:root {
+    --gradient: linear-gradient(
+        225deg,
+        rgba(224, 215, 147, 0.8),
+        rgba(130, 185, 221, 0.8),
+        rgba(70, 223, 183, 0.5),
+        rgba(120, 173, 215, 0.8),
+        rgba(124, 154, 180, 0.8),
+        rgba(159, 160, 183, 0.8),
+        rgba(166, 199, 212, 0.8),
+        rgba(169, 174, 205, 0.8),
+        rgba(204, 89, 212, 0.5),
+        rgba(112, 104, 226, 0.5)
+    );
+    --gradient100: linear-gradient(
+        225deg,
+        rgba(224, 215, 147),
+        rgba(130, 185, 221),
+        rgba(70, 223, 183),
+        rgba(120, 173, 215),
+        rgba(124, 154, 180),
+        rgba(159, 160, 183),
+        rgba(166, 199, 212),
+        rgba(169, 174, 205),
+        rgba(204, 89, 212),
+        rgba(112, 104, 226)
+    );
 }
 
 #main {
-    background-color: rgb(126, 126, 126);
-    position: relative;
     left: 0;
     text-align: center;
     display: flex;
@@ -19,38 +56,83 @@ body {
 
 .bodyText{
     max-width: 50%;
+    background-color: lightgray;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px black solid;
+    border-radius: 12px;
+}
+
+p{
+    margin: 5px;
+
+}
+
+h3{
+    margin-top: -10px;
+}
+
+#titleDiv{
+    background-image: url(./images/p1header.png);
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    justify-content: center;    
+    border: 2px black solid;
+
 }
 
 #appTitle{
+    display: flex;
     font-weight: 900;
     font-size: 126px;
-    background-image: url('https://i.redd.it/bf9cxbt9uab51.png');
-    background-size: cover;
-    width: 100%;
     color: white;
     text-shadow: 6px 11px 4px black;
     padding-bottom: 15px;
-    padding-top: 15px;
+    padding-top: 50px;
     margin: 0;
-    -webkit-text-stroke: 5px green;
+    -webkit-text-stroke: 5px black;
+    width: 100%;
+    justify-content: center;
 }
+
+#titleDiv h1:hover{
+    background-image: var(--gradient100);
+    background-size: 1000%;
+    animation: bg-animation 2s infinite alternate;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color:transparent;
+    text-shadow: none;
+}
+#titleDiv:hover{
+    background-image: url(./images/p1headerBW.png);
+}
+/* #appTitle:hover{
+    color: green;
+    outline: 10px green solid;
+} */
+
 
 #search-bar{
     display: flex;
     margin: 0;
     outline: aquamarine 5px double;
     border-radius: 12px;
-    transition:cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
 #search{
     width: 100%;
-    line-height: 2vh;
+    line-height: 20px;
     border-radius: 12px 0px 0px 12px;
     padding-left: 5px;
 }
+
 #search-bar:hover{
-    background-color: lightgray;
-    width: 350px;
+    background-color: rgba(211, 211, 211, 0.637);
+    font-weight: bold;
 }
 
 #search:hover{
@@ -59,29 +141,31 @@ body {
 
 #submitSearch{
     width: 75px;
-    line-height: 2vh;
+    line-height: 20px;
     border-radius: 0px 12px 12px 0px;
+    cursor: pointer;
 }
 #submitSearch:hover{
     font-weight: bold;
+    background-color: greenyellow;
 }
 
 #reset-button{
     background-color: aqua;
     display: flex;
     width: 200px;
-    line-height: 2vh;
+    line-height: 20px;
     border-radius: 12px;
     justify-content: center;
     margin-bottom: 20px;
     font-size: 20px;
     outline: aquamarine 3px solid;
-
+    cursor: pointer;
 }
 
 
 #animeHolder {
-    max-width: 95%;
+    max-width: 75%;
     display: flex;  
     flex-wrap: wrap;
     padding: 20px;
@@ -93,8 +177,10 @@ body {
     min-width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
-    align-items: center;
+    margin-bottom: 50px;
+    align-items: center;    
+    background-color: lightgray;
+
 }
 .container:hover{
     background-color: aqua;
@@ -122,10 +208,11 @@ body {
     display: flex;
     margin-bottom: 10px;
     border-radius: 8px;
+    cursor: pointer;
 }
 .animeLink:hover{
     opacity: 50%;
-    outline: 2px solid lightgreen;
+    border: 2px solid lightgreen;
 }
 
 .animeSpacer {
@@ -134,12 +221,7 @@ body {
     min-width: 2%;
 }
 
-p{
-    margin: 5px;
-}
-h3{
-    margin-top: -10px;
-}
+
 
 .animeDetails{
     width: 70%;
@@ -150,9 +232,6 @@ h3{
 
 
 
-ul {
-    list-style: none;
-}
 
 .footer{
     position: fixed;
@@ -161,10 +240,42 @@ ul {
     width: 100%;
     background-color: aqua;
     color: black;
-    text-align: center;
-    line-height: 1.5vh;
-    font-weight: 150;
-    font-size: 1vh;
+    line-height: 25px;
+    font-weight: 550;
+    font-size: 20px;
     letter-spacing: 1;
-    padding: .5vh;
+    padding: 5px;
+    display: flex;
+    align-items: stretch;
+    align-content: center;
+    justify-content: center;
+    border: 2px black solid;
+}
+
+.icons{
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: transform .7s ease-in-out;
+}
+.icons:hover{
+    transform: rotate(360deg);
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    margin: 5px;
+    padding-left: 15px;
+    padding-right: 15px; 
+    background: white;
+    border-radius: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-image: var(--gradient);
+    background-size: 500%;
+    animation: bg-animation 18s infinite alternate;
+    outline: 2px black solid;
 }

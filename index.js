@@ -132,6 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
         event.target.style.fontWeight = "normal"
     })
 
+
     }
 )
 
