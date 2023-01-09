@@ -52,6 +52,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: calc(100vh - 48px);
 }
 
 .bodyText{
@@ -61,7 +62,7 @@ body {
     margin-bottom: 15px;
     padding-left: 10px;
     padding-right: 10px;
-    border: 2px black solid;
+    border: 4px black solid;
     border-radius: 12px;
 }
 
@@ -84,7 +85,7 @@ h4{
     width: 100%;
     display: flex;
     justify-content: center;    
-    border: 2px black solid;
+    border: 4px black solid;
 
 }
 
@@ -93,7 +94,7 @@ h4{
     font-weight: 900;
     font-size: 126px;
     color: white;
-    text-shadow: 6px 11px 4px black;
+    text-shadow: 4px 4px 4px black, -4px -4px 4px black, 4px -4px 4px black, -4px 4px 4px black;
     padding-bottom: 15px;
     padding-top: 50px;
     margin: 0;
@@ -123,7 +124,7 @@ h4{
 #search-bar{
     display: flex;
     margin: 0;
-    outline: aquamarine 5px double;
+    outline: 2px black solid;
     border-radius: 12px;
 }
 
@@ -162,7 +163,7 @@ h4{
     justify-content: center;
     margin-bottom: 20px;
     font-size: 20px;
-    outline: aquamarine 3px solid;
+    outline: 2px black solid;
     cursor: pointer;
 }
 
@@ -171,22 +172,26 @@ h4{
     max-width: 75%;
     display: flex;  
     flex-wrap: wrap;
-    padding: 20px;
-    margin-bottom: 10px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0;
 }
 
 .container{
-    outline: #480319 solid 4px;
+    outline: black solid 4px;
     min-width: 100%;
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
     align-items: center;    
-    background-color: lightgray;
+    background-color: #d3d3d3;
 
 }
 .container:hover{
-    background-color: aqua;
+    /* background-color: rgb(123, 128, 128); */
+    background-color: #2C2C2C;
+    color: white;
 }
 
 .animeMediaHolder{
@@ -203,19 +208,26 @@ h4{
     border-radius: 12px;
     margin: 10px;
     width: 225px;
+    transition: .5s;
+
+}
+
+.animeCover:hover{
+    transform: rotateY(360deg);
+
 }
 
 .animeLink{
-    background-color: orange;
+    background-color: #cc59d4;
     padding: 8px;
     display: flex;
     margin-bottom: 10px;
     border-radius: 8px;
     cursor: pointer;
+    font-weight: bold;
 }
 .animeLink:hover{
-    opacity: 50%;
-    border: 2px solid lightgreen;
+    background-color: #33A62B;
 }
 
 .animeSpacer {
@@ -237,20 +249,23 @@ h4{
 
 
 .footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
+    height: 48px; 
     width: 100%;
-    background-color: #2e2d2d;
+    background-image: url(./images/p1header.png);
+    background-position: 95% 93%;
+    background-size: cover;
     color: white;
     line-height: 20px;
-    font-weight: 550;
-    font-size: 18px;
-    letter-spacing: 1;
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: 1.5;
     padding: 5px;
     display: flex;
     justify-content: center;
-    border: 2px black solid;
+    border: 4px black solid;
+    -webkit-text-stroke: 1.5px black;
+    text-shadow: 2px 2px 2px black, -2px -2px 2px black, -2px 2px 2px black, 2px -2px 2px black;
+
 }
 
 .icons{
@@ -263,11 +278,12 @@ h4{
 }
 
 .links{
+    position: inherit;
     display: flex;
     flex-direction: row;
     position: fixed;
-    top: 5px;
-    right: 5px;
+    top: 12px;
+    right: 12px;
     margin: 5px;
     padding-left: 15px;
     padding-right: 15px; 
@@ -278,23 +294,35 @@ h4{
     background-image: var(--gradient);
     background-size: 500%;
     animation: bg-animation 18s infinite alternate;
-    outline: 2px black solid;
+    outline: 4px black solid;
 }
 
 a:link{
     color: cyan;
     text-decoration: none;
     font-weight: 900;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 2px 2px 2px black, -2px -2px 2px black, -2px 2px 2px black, 2px -2px 2px black;
+
 }
 a:visited{
     color:fuchsia;
     text-decoration: none;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 2px 2px 2px black, -2px -2px 2px black, -2px 2px 2px black, 2px -2px 2px black;
+
 }
 a:hover{
     color:yellow;
     text-decoration: underline;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 2px 2px 2px black, -2px -2px 2px black, -2px 2px 2px black, 2px -2px 2px black;
+
 }
 a:active{
     color: orange;
     text-decoration: underline;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 2px 2px 2px black, -2px -2px 2px black, -2px 2px 2px black, 2px -2px 2px black;
+
 }
