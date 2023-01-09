@@ -7,47 +7,51 @@ document.addEventListener("DOMContentLoaded", () => {
         resetAnimeList()
         console.log("this is event: ", event.target[0].value)
         fetch(`https://api.jikan.moe/v4/manga?order_by=popularity&sfw=true&q=${event.target[0].value}`)
-        .then(response => response.json())
-        .then(response => {                      
-            const animeDataList = response.data.map(item =>{
-                return {
-                    title: item.title,
-                    picture: item.images.jpg.image_url,
-                    author: item.authors[0]?.name || "The author was not listed.",
-                    blurb: item?.synopsis || "No synopsis provided.",
-                    score: item?.score || "No score was found.",
-                    status: item?.status || "Status unclear.",
-                    link: item.url
-                    //optional chaining + logical OR to allow for incomplete API data   
-                }
-                }
-            )
-            console.log("this is the animedatalist: ", animeDataList)
-            
-            //creates the divs for each answr
-            const animeDivList = animeDataList.map(item =>{
-                //creates the actual div that will hold each result + labels
-                const animeContainer = document.createElement("div");
-                animeContainer.classList.add("container")
-                
-                //creates a picture div inside of the container div and adds the picture
-                const animePictureDiv = document.createElement("div");
-                animePictureDiv.classList.add("animeMediaHolder")
-                animeContainer.appendChild(animePictureDiv)
-                const img = document.createElement("img")
-                img.classList.add("animeCover")
-                animePictureDiv.appendChild(img)
-                img.src = item.picture
-
-                //this creates a button under the anime cover and links to the MAL page
-                const malLink = document.createElement("button");
-                animePictureDiv.appendChild(malLink)
-                malLink.innerText = "Visit the MyAnimeList page!"
-                malLink.classList.add("animeLink")
-                malLink.addEventListener("click", (e) =>{
-                    window.open(item.link, '_blank')
+            .then(response => response.json())
+            .then(response => {                      
+                const animeDataList = response.data.map(item =>{
+                    return {
+                        title: item.title,
+                        picture: item.images.jpg.image_url,
+                        author: item.authors[0]?.name || "The author was not listed.",
+                        blurb: item?.synopsis || "No synopsis provided.",
+                        score: item?.score || "No score was found.",
+                        status: item?.status || "Status unclear.",
+                        link: item.url
+                        //optional chaining + logical OR to allow for incomplete API data   
+                        }
                     }
-                )
+                    )
+            console.log("this is the animedatalist: ", animeDataList)
+            if (animeDataList.length < 1) {
+                console.log("This array is empty. No results found")
+                alert("Sorry, no results were found. Try something else!")
+            }
+            
+                //creates the divs for each answr
+                const animeDivList = animeDataList.map(item =>{
+                    //creates the actual div that will hold each result + labels
+                    const animeContainer = document.createElement("div");
+                    animeContainer.classList.add("container")
+                
+                    //creates a picture div inside of the container div and adds the picture
+                    const animePictureDiv = document.createElement("div");
+                    animePictureDiv.classList.add("animeMediaHolder")
+                    animeContainer.appendChild(animePictureDiv)
+                    const img = document.createElement("img")
+                    img.classList.add("animeCover")
+                    animePictureDiv.appendChild(img)
+                    img.src = item.picture
+
+                    //this creates a button under the anime cover and links to the MAL page
+                    const malLink = document.createElement("button");
+                    animePictureDiv.appendChild(malLink)
+                    malLink.innerText = "Visit the MyAnimeList page!"
+                    malLink.classList.add("animeLink")
+                    malLink.addEventListener("click", (e) =>{
+                        window.open(item.link, '_blank')
+                        }
+                    )
 
                 //creates a blank div to make flexbox play fair and create a vertical gap between the manga pic and details
                 const animeSpacer = document.createElement("div");
@@ -104,8 +108,9 @@ document.addEventListener("DOMContentLoaded", () => {
             
 
             )
-        // .catch(error => console.log("ERROR"))
-
+        .catch(error => {
+            console.log("ERROR")
+        })
         formSearch.reset()
 
         }
