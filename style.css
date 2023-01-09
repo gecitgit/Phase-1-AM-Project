@@ -241,16 +241,14 @@ h4{
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: aqua;
-    color: black;
+    background-color: #2e2d2d;
+    color: white;
     line-height: 20px;
     font-weight: 550;
     font-size: 18px;
     letter-spacing: 1;
     padding: 5px;
     display: flex;
-    align-items: stretch;
-    align-content: center;
     justify-content: center;
     border: 2px black solid;
 }
@@ -281,4 +279,22 @@ h4{
     background-size: 500%;
     animation: bg-animation 18s infinite alternate;
     outline: 2px black solid;
+}
+
+a:link{
+    color: cyan;
+    text-decoration: none;
+    font-weight: 900;
+}
+a:visited{
+    color:fuchsia;
+    text-decoration: none;
+}
+a:hover{
+    color:yellow;
+    text-decoration: underline;
+}
+a:active{
+    color: orange;
+    text-decoration: underline;
 }
