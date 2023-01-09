@@ -13,9 +13,12 @@
             <h1 id="appTitle">Manga Search App</h1>
         </div>
         <div class="bodyText">
-            <h1>Find something new to read.</h1>
-            <h3>Use the search bar below to search for your favorite Manga! Click the button under each cover to visit the MyAnimeList page for that manga to learn more about it. Please note that due to some API limitations certain English searches will yield unexpected results. <br> Whenever you search for something new the existing list will reset. You can also reset the list manually by using the "Clear the List" button.
-            </h3>
+            <h1 id="subTitle">Find something new to read.</h1>
+            <h4>
+                Use the search bar below to find your favorite Manga! Under each Manga cover you will find a link that leads to that Manga's MyAnimeList page to read more.  Some search terms are limited by the API which may yield to inconsistent results in the English and Japanese names.
+                <br><br>
+                The list will automatically reset whenever you search for a new term or you can opt to the use the reset button below to clear it manually.
+            </h4>
         </div>
         
         <!-- <h3 class="bodyText"></h3> -->
@@ -27,7 +30,7 @@
 
         <!-- people will search for animoos with this -->
         <form id="search-bar">
-            <input id="search" placeholder="Search for a manga title" type="text" name="find an animanga">
+            <input id="search" placeholder="Search for a manga title..." type="text">
             <input id="submitSearch" type="submit" name="submitsomething"/>
         </form>
 
@@ -40,7 +43,9 @@
 
     </div>
     <div class="footer">
-        <a>Taulant Ismailgeci - Phase 1 Project - Flatiron School Software Engineering Program</a>
+        <!-- <a>Taulant Ismailgeci - Phase 1 Project - Flatiron School Software Engineering Program</a>
+        <br> -->
+        <a>Powered by Jikan API. Icons provided by Icons8</a>
     </div>
 
     <div class="links">
