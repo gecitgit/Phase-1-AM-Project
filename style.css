@@ -94,7 +94,7 @@ h4{
     font-weight: 900;
     font-size: 126px;
     color: white;
-    text-shadow: 4px 4px 4px black, -4px -4px 4px black, 4px -4px 4px black, -4px 4px 4px black;
+    text-shadow: 6px 6px 6px black, -6px -6px 6px black, 6px -6px 6px black, -6px 6px 6px black;
     padding-bottom: 15px;
     padding-top: 50px;
     margin: 0;
@@ -201,6 +201,7 @@ h4{
     flex-wrap: nowrap;
     align-items: center;
     margin-left: 5%;
+    overflow: hidden;
 }
 .animeCover{
     align-self: center;
@@ -209,13 +210,14 @@ h4{
     border-radius: 12px;
     margin: 10px;
     width: 225px;
-    transition: .5s;
-
+    outline: 4px solid black;
+    outline-offset: -4px;
+    transition: outline-offset 250ms ease-in-out;
 }
 
 .animeCover:hover{
-    transform: rotateY(360deg);
-
+    outline-offset: 0px;
+    outline: 2px solid #cc59d4;
 }
 
 .animeLink{
