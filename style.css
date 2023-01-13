@@ -72,10 +72,12 @@ p{
 }
 h4{
     margin-top: 0;
+    /* font-size: 1.5vw; */
 }
 #subTitle{
     margin-top: 10px;
     margin-bottom: 10px;
+    /* font-size: 2vw; */
 }
 
 
@@ -92,7 +94,7 @@ h4{
 #appTitle{
     display: flex;
     font-weight: 900;
-    font-size: 126px;
+    font-size: 6vw;
     color: white;
     text-shadow: 6px 6px 6px black, -6px -6px 6px black, 6px -6px 6px black, -6px 6px 6px black;
     padding-bottom: 15px;
