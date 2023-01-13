@@ -8,7 +8,7 @@ As part of our phase 1 project we were prompted to create a single page web app 
 
 Over the past few months I have a new found admiration for the manga and anime universe. I was always adjacent to the broad fandom but never fully immersed myself until a friend of mine insisted that I borrow his first volume of Berserk.  When researching some public API lists I came across the [Jikan API](https://docs.api.jikan.moe/) and I thought the timing could not have been more perfect. 
 
-Once the functionality of the app was taken care of I spent quite some time playing with the CSS to try and get the app to as closely match my mental image as possible.  I hope you enjoy browsing it!  Feel free to read more about this project and others at my [Medium blog](https://medium.com/@t.ismailgeci).
+Once the functionality of the app was taken care of I spent quite some time playing with the CSS to try and get the app to as closely match my mental image as possible.  I hope you enjoy browsing it!  Feel free to read more about this project and others at my [Medium blog](https://medium.com/@t.ismailgeci/phase-1-project-getting-my-feet-wet-in-the-coding-world-d4c193c3afb5).
 
 ---
 ## Deployment

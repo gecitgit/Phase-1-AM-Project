@@ -141,6 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 )
 
+//
 function resetAnimeList(){
     animeHolder.innerHTML = ""
 }
@@ -153,7 +154,7 @@ function resetAnimeList(){
 //this function runs when START OVER is clicked
 //It prompts the user to confirm if they want to reset the page 
 function resetChecker(){
-    const resetResult = confirm("Press OK to reset the page \nPress Cancel to keep looking at the current animanga")
+    const resetResult = confirm("Press OK to reset the page \nPress Cancel to keep looking at your current Manga search.")
     if (resetResult === true){
         const list = document.getElementById("animeHolder")
         list.innerText = ""
