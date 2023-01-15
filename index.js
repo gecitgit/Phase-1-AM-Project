@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault()
         resetAnimeList()
         console.log("this is event: ", event.target[0].value)
-        fetch(`https://api.jikan.moe/v4/manga?order_by=popularity&sfw=true&q=${event.target[0].value}`)
+        fetch(`https://api.jikan.moe/v4/manga?order_by=scored_by&sfw=true&sort=desc&q=${event.target[0].value}`)
             .then(response => response.json())
             .then(response => {                      
                 const animeDataList = response.data.map(item =>{
