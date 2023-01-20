@@ -6,10 +6,18 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault()
         resetAnimeList()
         console.log("this is event: ", event.target[0].value)
-        fetch(`https://api.jikan.moe/v4/manga?order_by=scored_by&sfw=true&sort=desc&q=${event.target[0].value}`)
+        const searchVal = event.target[0].value
+        fetch(`https://api.jikan.moe/v4/manga?order_by=title&sfw=true&sort=asc&q=${searchVal}`)
             .then(response => response.json())
-            .then(response => {                      
-                const animeDataList = response.data.map(item =>{
+            .then(response => {
+                const responseFilter = response.data.filter(function(item) {
+                    if(item.title.toUpperCase().match(searchVal.toUpperCase())){
+                        console.log ("MATCH")
+                        return item
+                    }
+                }
+                )
+                const animeDataList = responseFilter.map(item =>{
                     return {
                         title: item.title,
                         picture: item.images.jpg.image_url,
